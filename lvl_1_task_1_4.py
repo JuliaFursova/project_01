@@ -41,8 +41,9 @@ store = {
 
 
 for title, code in titles.items():
-  stock_value = store.get(code, [{'quantity': 0, 'price': 0}])
-  for code_val in stock_value:
-    cou = code_val.get('quantity')
-    price = code_val.get('price')
-    print(f"{title} - {cou} шт, стоимость {cou * price} руб")
+  total_quantity = 0
+  total_price = 0
+  for titles in store[code]:
+    total_quantity += titles['quantity']
+    total_price += titles['price']
+  print(f"{title} - {total_quantity} шт, стоимость {total_price} руб")
