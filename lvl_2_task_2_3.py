@@ -16,9 +16,9 @@ Original file is located at
 # switch_it_up(10000) -> None
 # Использовать условный оператор if-elif-else нельзя!
 
+number = int(input("Введите число от 0 до 9:"))
 
 def switch_it_up(number):
-  number = int(input("Введите число от 0 до 9:"))
   in_words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
   print(in_words[number])
 
